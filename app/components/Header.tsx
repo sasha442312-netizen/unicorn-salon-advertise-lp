@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-(--color-line) bg-(--color-bg)/90 backdrop-blur">
+    <header className="sticky top-0 z-50 hidden border-b border-(--color-line) bg-(--color-bg)/90 backdrop-blur md:block">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <div className="flex items-baseline gap-2">
           <span className="font-serif-jp text-xl font-bold tracking-[0.15em] text-(--color-ink)">
