@@ -6,6 +6,7 @@ import Pricing from "./components/Pricing";
 import Flow from "./components/Flow";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import FloatingLineButton from "./components/FloatingLineButton";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
+      <FloatingLineButton />
     </>
   );
 }
