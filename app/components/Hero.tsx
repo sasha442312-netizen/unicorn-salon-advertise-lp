@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { IconCalendarCheck, IconTrendUp, IconUserPlus } from "./icons";
 
 const features = [
@@ -18,8 +19,29 @@ const features = [
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-(--color-bg) to-(--color-bg-soft)">
-      <div className="pointer-events-none absolute -right-32 top-10 h-96 w-96 rounded-full bg-(--color-gold-soft) opacity-30 blur-3xl" />
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-20 pt-14 md:grid-cols-2 md:pb-28 md:pt-20">
+      {/* スマホ幅：デザイン案の画像をそのまま表示 */}
+      <div className="block md:hidden">
+        <Image
+          src="/mockups/hero-sp.jpg"
+          alt="自社から予約が入る、もう1本の集客経路を。Meta広告・Google・LP・LINEをつなぎ、新規予約から再来までまとめて運用。"
+          width={1024}
+          height={1536}
+          priority
+          className="h-auto w-full"
+        />
+        <div className="flex justify-center bg-(--color-bg) px-6 pb-10 pt-6">
+          <a
+            href="#contact"
+            className="rounded-full bg-(--color-gold) px-8 py-4 text-sm font-bold text-white shadow-md shadow-(--color-gold-soft) transition hover:bg-(--color-gold-deep)"
+          >
+            無料で集客導線診断を受ける
+          </a>
+        </div>
+      </div>
+
+      {/* PC・タブレット幅：コード実装 */}
+      <div className="pointer-events-none absolute -right-32 top-10 hidden h-96 w-96 rounded-full bg-(--color-gold-soft) opacity-30 blur-3xl md:block" />
+      <div className="mx-auto hidden max-w-6xl items-center gap-12 px-6 pb-20 pt-14 md:grid md:grid-cols-2 md:pb-28 md:pt-20">
         <div>
           <p className="mb-5 text-sm font-bold tracking-widest text-(--color-gold-deep)">
             美容室・サロン向け 集客運用サービス

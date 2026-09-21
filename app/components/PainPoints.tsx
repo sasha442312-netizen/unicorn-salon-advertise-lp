@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const pains = [
   {
     no: "01",
@@ -23,8 +25,20 @@ const pains = [
 
 export default function PainPoints() {
   return (
-    <section className="bg-(--color-bg-soft) py-20">
-      <div className="mx-auto max-w-3xl px-6 text-center">
+    <section className="bg-(--color-bg-soft)">
+      {/* スマホ幅：デザイン案の画像をそのまま表示 */}
+      <div className="block md:hidden">
+        <Image
+          src="/mockups/painpoints-sp.jpg"
+          alt="こんなお悩みありませんか？ HOT PEPPER以外から全然予約が入らない、InstagramやGoogleをやっても予約につながらない、LINEはあるけどほとんど使えていない、集客にお金を使っても何が効いたか分からない、新規は来るけどリピートにつながらない"
+          width={941}
+          height={1672}
+          className="h-auto w-full"
+        />
+      </div>
+
+      {/* PC・タブレット幅：コード実装 */}
+      <div className="mx-auto hidden max-w-3xl px-6 py-20 text-center md:block">
         <p className="mb-3 text-sm font-bold tracking-widest text-(--color-gold-deep)">
           SALON OWNER&apos;S TROUBLE
         </p>
