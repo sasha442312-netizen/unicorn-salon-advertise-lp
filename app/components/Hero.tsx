@@ -29,14 +29,6 @@ export default function Hero() {
           priority
           className="h-auto w-full"
         />
-        <div className="flex justify-center bg-(--color-bg) px-6 pb-10 pt-6">
-          <a
-            href="#contact"
-            className="rounded-full bg-(--color-gold) px-8 py-4 text-sm font-bold text-white shadow-md shadow-(--color-gold-soft) transition hover:bg-(--color-gold-deep)"
-          >
-            無料で集客導線診断を受ける
-          </a>
-        </div>
       </div>
 
       {/* PC・タブレット幅：コード実装 */}
