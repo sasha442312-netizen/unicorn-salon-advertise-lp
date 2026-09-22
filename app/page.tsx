@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import PainPoints from "./components/PainPoints";
+import ProblemDiagnosis from "./components/ProblemDiagnosis";
 import Solution from "./components/Solution";
 import Pricing from "./components/Pricing";
 import Flow from "./components/Flow";
@@ -15,6 +16,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <PainPoints />
+        <ProblemDiagnosis />
         <Solution />
         <Pricing />
         <Flow />
